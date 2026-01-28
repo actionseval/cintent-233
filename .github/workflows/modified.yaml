@@ -21,16 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          # CINTENT >> CHANGE_VERSION
-          # python-version: "3.8"
-          python-version: "3.10"
-          
+          python-version: "3.8"
+
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -68,15 +66,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
-
       - name: Set up Python 3.8
         uses: actions/setup-python@v4
         with:
-          # CINTENT >> CHANGE_VERSION
-          # python-version: "3.8"
-          python-version: "3.10"
+          python-version: "3.8"
+
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
 
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
